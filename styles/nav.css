@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Philosopher&display=swap');
+
+:root {
+    --size: 1;
+    --primary-color: #d30000;
+    --secondary-color: rgb(161, 3, 5);
+    --third-color: #ff0707;
+    
+   
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   
+   }
+
+::-webkit-scrollbar{
+    display: none;
+    width: 6px;
+}
+
+::-webkit-scrollbar-track{
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb{
+    /* background: var(--secondary-color); */
+    border-radius: 8px;
+    background-image: linear-gradient(180deg, transparent , var(--primary-color));
+
+}
+
+::-webkit-scrollbar-corner{
+    border-radius: 8px;
+}
+
+body{
+    color:#fff;
+    background-image: url(/images/header.png);
+    overflow: overlay;
+    overflow-x:hidden;
+    user-select: none;
+  
+}
+
+html,body,.home-head, .container{
+    height: 100%;
+    scroll-behavior: smooth;
+    width: 100%;
+}
+
+.container{
+    width: 100%;
+    margin: 0px;
+    position: relative;
+    z-index: 2;
+    pointer-events: none;
+}
+
+canvas{
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    top:0;
+    left:0;
+    opacity: 0.5;
+}
+
+
+span{
+    color: var(--primary-color);
+}
+
+footer{
+    background-color: rgb(0, 0, 0, 0.3);
+    text-align: center;
+    font-size: 20px;
+    padding: 20px 0;
+    font-family: 'Philosopher', sans-serif;
+    text-shadow: 0 0 10px var(--primary-color);
+    z-index: 5;
+    position: relative;
+    pointer-events: none;
+  
+}
+
+body.active{
+    overflow: hidden;
+}
+
+footer{
+    z-index: 1;
+   
+}
+
+.blur{
+    filter: blur(0.5rem);
+}
+
+.nav{
+    z-index: 999;
+    position: fixed;
+    background-color: rgb(0, 0, 0, 0.3);
+    height: 80px;
+    transition: all 0.5s;
+    width: 100%;
+}
+
+.nav.active{
+    background-color: rgb(0, 0, 0);
+}
+
+.nav ul{
+   
+    display: block;
+    list-style: none;
+    width: auto;
+    justify-content: center;
+    background-color: rgb(0, 0, 0, 0.7);
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top:80px;
+    right: -100%;
+    transition: all 0.5s;
+    overflow: auto;
+   
+    
+}
+
+.nav ul.active{
+    right: 0%;
+}
+
+.nav li{
+    display: flex;
+    justify-content: center;
+}
+.nav ul a{
+   
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-decoration: none;
+    color:#fff;
+    font-size: 25px;
+    font-weight: bold;
+    transition-duration: 0.5s;
+    font-family: 'Philosopher', sans-serif;
+    margin-right: 20px;
+   
+
+}
+
+.nav a:hover:before{
+    transform: scaleX(1);
+    transition: 0.25s;
+}
+
+.social-media a{
+    position: relative;
+}
+
+
+.social-media a::before{
+    content: '';
+    width: 100%;
+    height: 3px;
+    background-color: var(--secondary-color);
+    position: absolute;
+    left:0px; bottom: -10px;
+    transform: scaleX(0);
+}
+
+.social-media2{
+    display: none;
+}
+
+ul.active a{
+    position: relative;
+}
+
+ul.active a:before{
+    content: '';
+    width: 100%;
+    height: 3px;
+    background-color: var(--secondary-color);
+    position: absolute;
+    left:0px; bottom: 15px;
+    transform: scaleX(0);
+}
+
+
+
+
+
+
+.nav a:hover{
+    
+    color: var(--secondary-color);
+}
+
+.burger{
+    height: 30px;
+    display: flex;
+    float: left;
+    margin: 30px 40px;
+    position: relative;
+    cursor: pointer;
+    
+}
+
+.burger-button{
+    background-color:#fff;
+    display: flex;
+    content: '';
+    height: 3px;
+    width: 30px;
+    transition:all 0.25s;
+}
+
+
+.burger-button::before{
+    position: fixed;
+    background-color: #fff;
+    margin-top: 10px;
+    content: '';
+    height: 3px;
+    width: 30px;
+    transition:all 0.25s;
+   
+}
+.burger-button::after{
+    position: fixed;
+    background-color: #fff;
+    margin-top: 20px;
+    content: '';
+    height: 3px;
+    width: 20px;
+    transition:all 0.25s;
+    
+}
+
+.burger-button:hover{
+    width: 30px;
+}
+
+.burger.burger-button::after:hover{
+    width: 30px;
+}
+
+.burger-button.active{
+    background-color:transparent;
+    
+}
+
+.burger-button.active::before{
+    transform:rotate(45deg);
+}
+.burger-button.active::after{
+    transform:rotate(-45deg);
+    top:20px;
+    width: 30px;
+}
+
+
