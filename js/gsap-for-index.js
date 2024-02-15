@@ -1,3 +1,8 @@
+import scrub from "./checkCpu.js";
+
+let changeScrub = scrub;
+
+console.log('Current scrub value:', scrub);
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -21,7 +26,7 @@ const tl_to_scroll_1 = gsap.timeline({scrollTrigger:{
 const tl_to_scroll_2 =gsap.timeline({scrollTrigger: {
   trigger: ".concept-suptitle",
   // markers: true,
-  scrub: 1,
+  scrub: changeScrub,
   start: ("bottom 70%"),
   end: ("bottom 5%"),  
 }
@@ -31,7 +36,7 @@ const tl_to_scroll_2 =gsap.timeline({scrollTrigger: {
 const tl_to_scroll_3 =gsap.timeline({scrollTrigger: {
   trigger: ".enumerate2-to-gsap-1",
   //markers: true,
-  scrub: 1,
+  scrub: changeScrub,
   start: ("bottom 80%"),
   end: ("bottom 50%"),  
   toggleActions: "play restart none none",
@@ -42,7 +47,7 @@ const tl_to_scroll_3 =gsap.timeline({scrollTrigger: {
 const tl_to_scroll_4 =gsap.timeline({scrollTrigger: {
   trigger: ".enumerate2-to-gsap-1",
   // markers: true,
-  scrub: 1,
+  scrub: changeScrub,
   start: ("bottom 75%"),
   end: ("bottom 10%"),  
   toggleActions: "play restart none none",
@@ -52,7 +57,7 @@ const tl_to_scroll_4 =gsap.timeline({scrollTrigger: {
 const tl_to_scroll_5 =gsap.timeline({scrollTrigger: {
   trigger: ".enumerate2-to-gsap-2",
   // markers: true,
-  scrub: 1,
+  scrub: changeScrub,
   start: ("top 90%"),
   end: ("bottom 40%"),  
   toggleActions: "play reverse none none",
@@ -62,7 +67,7 @@ const tl_to_scroll_5 =gsap.timeline({scrollTrigger: {
 const tl_to_scroll_6 =gsap.timeline({scrollTrigger: {
   trigger: ".enumerate2-to-gsap-2",
   // markers: true,
-  scrub: 1,
+  scrub: changeScrub,
   start: ("top 50%"),
   end: ("top 0%"),  
   toggleActions: "play restart none none",
@@ -72,7 +77,7 @@ const tl_to_scroll_6 =gsap.timeline({scrollTrigger: {
 const tl_to_scroll_7 =gsap.timeline({scrollTrigger: {
   trigger: ".road-circle-to-animate-gsap-2",
   // markers: true,
-  scrub: 1,
+  scrub: changeScrub,
   start: ("center 50%"),
   end: ("top 0%"),  
   toggleActions: "play restart none none",
@@ -82,7 +87,7 @@ const tl_to_scroll_7 =gsap.timeline({scrollTrigger: {
 const tl_to_scroll_8 =gsap.timeline({scrollTrigger: {
   trigger: ".lines-to-flang",
   //markers: true,
-  scrub: 1,
+  scrub: changeScrub,
   start: ("center 90%"),
   end: ("top 40%"),  
   toggleActions: "play restart none none",
@@ -92,7 +97,7 @@ const tl_to_scroll_8 =gsap.timeline({scrollTrigger: {
 const tl_to_scroll_9 =gsap.timeline({scrollTrigger: {
   trigger: ".waves-to-animate-1",
   //markers: true,
-  scrub: 1,
+  scrub: changeScrub,
   start: ("top 80%"),
   end: ("top -20%"),  
   toggleActions: "play restart none none",
@@ -102,7 +107,7 @@ const tl_to_scroll_9 =gsap.timeline({scrollTrigger: {
 const tl_to_scroll_10 =gsap.timeline({scrollTrigger: {
   trigger: ".circle-to-animate-gsap-4",
   // markers: true,
-  scrub: 1,
+  scrub: changeScrub,
   start: ("center 60%"),
   end: ("bottom 30%"),  
   toggleActions: "play restart none none",

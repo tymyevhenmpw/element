@@ -2849,36 +2849,6 @@ input:focus{
     }
 }
 
-@media (max-width:1150px){
-    .border-left{
-        margin-left: 50px;
-    }
-    .border-left::after{
-        margin-left: 50px;
-    }
-    .left{
-        margin-left: -50px;
-    }
-    .right{
-        margin-right: 50px;
-    }
-
-    .concept-part{
-        font-size: calc(var(--size)*36px);
-    }
-
-    .to-final{
-        font-size: calc(var(--size)*80px);
-        line-height: calc(var(--size)*88px);
-    }
-
-    .to-right{
-        margin-right: 25px;
-    }
-
-
-}
-
 
 @media(max-width:1090px){
     .trainer{
@@ -2983,7 +2953,31 @@ input:focus{
 
 
 @media(max-width: 1050px){
+
+    .border-left{
+        margin-left: 50px;
+    }
+    .border-left::after{
+        margin-left: 50px;
+    }
+    .left{
+        margin-left: -50px;
+    }
+    .right{
+        margin-right: 50px;
+    }
+
+    .concept-part{
+        font-size: calc(var(--size)*36px);
+    }
+
+    .to-final{
+        font-size: calc(var(--size)*80px);
+        line-height: calc(var(--size)*88px);
+    }
+
     .to-right{
+        margin-right: -125px;
         text-align: center;
         margin-bottom: 140px;
     }
@@ -3002,8 +2996,6 @@ input:focus{
         transform: rotate(0deg);
 
     }
-
-    
 
     .circle-to-animate-gsap-2, .circle-to-animate-gsap-3{
         height: calc(var(--size)*150px);
