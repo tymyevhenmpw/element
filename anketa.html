@@ -69,7 +69,6 @@
                 <ul>
                     <li><a href="index.html">Головна</a></li>
                     <li><a href="about.html">Про проект</a></li>
-                    <li><a href="trainers.html">Наставники проєкту</a></li>
                     <li><a href="anketa.html">Реєстрація на участь</a></li>
                     <li><a href="team.html">Команда проєкту</a></li>
                     <li><a href="#">Квитки</a></li>
@@ -94,41 +93,57 @@
         <main class="anketa bl">
             
             <div class="container">
-                <form class="ank_form">
+                <form class="ank_form" action="https://docs.google.com/forms/d/e/1FAIpQLScz8fCSJlzKV6RTRhMea_an2yMtsc7u0Rycbrl9Se8TRT64-A/formResponse">
                     <div class="form__content">
                         <div class="group">      
-                            <input type="text" required class="to-hover">
+                            <input type="text" name="entry.811865283" required ="to-hover" >
                             
                             <span class="bar"></span>
                             <label>Ім'я</label>
                         </div>
                         <div class="group">      
-                            <input type="text" required class="to-hover">
+                            <input type="text" name="entry.924669349" required ="to-hover">
                             <span class="highlight"></span>
                             <span class="bar"></span>
                             <label>Прізвище</label>
                         </div>
                         <div class="group">      
-                            <input type="text" required class="to-hover">
+                            <input type="text" name="entry.1321438026" required ="to-hover">
                             
                             <span class="bar"></span>
                             <label>По батькові</label>
                         </div>
                         <div class="group">      
-                            <input type="text" required class="to-hover">
+                            <input type="text" name="entry.1558905868" required ="to-hover">
+                            
+                            <span class="bar"></span>
+                            <label>Ваш вік</label>
+                        </div>
+                        <div class="group">      
+                            <input type="text" name="entry.1497252222" required ="to-hover">
                            
                             <span class="bar"></span>
                             <label>Email</label>
                         </div>
+
                         <div class="group">      
-                            <input type="number" required class="to-hover">
-                          
+                            <input type="text" name="entry.45020289" required ="to-hover">
+                           
+                            <span class="bar"></span>
+                            <label>Звідки ви дізнались про нас?</label>
+                        </div>
+
+
+                        <div class="group">      
+                            <input type="number" name="entry.53673889" required ="to-hover">
+                            
                             <span class="bar"></span>
                             <label>Номер телефону</label>
                         </div>
-                        <div><textarea  placeholder="Напишіть про себе" class="to-hover"></textarea></div>
+                      
+                        <div><textarea  placeholder="Напишіть про себе" name="entry.2092568481"></textarea></div>
 
-                        <div><input type="submit" value="Відправити" class="send" class="to-hover"></div>
+                        <div><input type="submit" value="Підтвердити" class="send"></div>
                     </div>
                 </form>
             </div>
@@ -137,61 +152,45 @@
         </main>
         <canvas></canvas>
         <div class="black"></div>
-      <footer>
-        М.Вінниця
-      </footer>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
       <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script> 
-      <script>
-         const lenis1 = new Lenis({
-             lerp: .05,
-             smooth: true,
-             smoothTouch: true,
-             })
-             lenis1.on('scroll', (e) => {
-             })
-             function raf(time) {
-             lenis1.raf(time)
-             requestAnimationFrame(raf)
-             }
-             
-             requestAnimationFrame(raf)
-
-
-             const lenis2 = new Lenis({
-             lerp: .05,
-             smooth: true,
-             smoothTouch: true,
-             }
-             )
-
-             lenis2.on('scroll', ScrollTrigger.update)
-
-             gsap.ticker.add((time)=>{
-             lenis2.raf(time * 1000)
-             })
-
-             gsap.ticker.lagSmoothing(0)
-             var stats = new Stats();
-                stats.showPanel( 1 ); // 0: fps, 1: ms, 2: mb, 3+: custom
-                document.body.appendChild( stats.dom );
-
-                function animate() {
-
-                    stats.begin();
-
-                    // monitored code goes here
-
-                    stats.end();
-
-                    requestAnimationFrame( animate );
-
-                }
-
-                requestAnimationFrame( animate );
-      </script> 
       <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script> 
+      <script>
+        let windowWidth = window.innerWidth;
+
+        if (windowWidth < 1080 ){
+            null
+        } else {
+            const lenis1 = new Lenis({
+                lerp: .05,
+                smooth: true,
+                smoothTouch: true,
+            })
+            lenis1.on('scroll', (e) => {})
+            function raf(time) {
+                lenis1.raf(time)
+                requestAnimationFrame(raf)
+            }
+
+            requestAnimationFrame(raf)
+
+
+            const lenis2 = new Lenis({
+                lerp: .05,
+                smooth: true,
+                smoothTouch: true,
+            })
+
+            lenis2.on('scroll', ScrollTrigger.update)
+
+            gsap.ticker.add((time)=>{
+                lenis2.raf(time * 1000)
+            })
+
+            gsap.ticker.lagSmoothing(0)
+        }
+      </script>
       <script src="js/script.js"></script>
       <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
       <script src="js/cursor.js"></script>   

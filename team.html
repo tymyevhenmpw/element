@@ -43,7 +43,6 @@
                 <ul>
                   <li><a href="index.html">Головна</a></li>
                   <li><a href="about.html">Про проект</a></li>
-                  <li><a href="trainers.html">Наставники проєкту</a></li>
                   <li><a href="anketa.html">Реєстрація на участь</a></li>
                   <li><a href="team.html">Команда проєкту</a></li>
                   <li><a href="#">Квитки</a></li>
@@ -131,55 +130,55 @@
         <div class="black"></div>
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
         <script>
-            const swiper = new Swiper('.swiper', {
-    // Optional parameters
-    direction: 'horizontal',
-    loop: false,
+          const swiper = new Swiper('.swiper', {
+          // Optional parameters
+          direction: 'horizontal',
+          loop: false,
 
-    // If we need pagination
-    pagination: {
-        el: '.swiper-pagination',
-        type: 'fraction'
-    },
+          // If we need pagination
+          pagination: {
+              el: '.swiper-pagination',
+              type: 'fraction'
+          },
 
-    // Navigation arrows
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
+          // Navigation arrows
+          navigation: {
+              nextEl: '.swiper-button-next',
+              prevEl: '.swiper-button-prev',
+          },
 
-    // And if we need scrollbar
-    scrollbar: {
-        el: '.swiper-wrapper',
-    },
+          // And if we need scrollbar
+          scrollbar: {
+              el: '.swiper-wrapper',
+          },
 
-    parallax: true,
-    
-    effect: "coverflow",
+          parallax: true,
+          
+          effect: "coverflow",
 
-    mousewheel: {
-        sensitivity: 1,
-    
-    },
-
-
-});
+          mousewheel: {
+              sensitivity: 1,
+          
+          },
 
 
+      });
 
-var windowHeight = window.innerHeight;
-console.log("Висота вікна браузера: " + windowHeight + " пікселів");
-var a = document.querySelector('.swiper');
-console.log(a);
-var divHeight = a.clientHeight;
-console.log("Висота div елемента: " + divHeight + " пікселів");
 
-var margin = (windowHeight - divHeight)/2;
-if(divHeight>=windowHeight-80){
-  a.style.paddingTop = '90px';
-}else{
-  a.style.paddingTop = margin+20+ 'px';
-}
+
+      var windowHeight = window.innerHeight;
+      console.log("Висота вікна браузера: " + windowHeight + " пікселів");
+      var a = document.querySelector('.swiper');
+      console.log(a);
+      var divHeight = a.clientHeight;
+      console.log("Висота div елемента: " + divHeight + " пікселів");
+
+      var margin = (windowHeight - divHeight)/2;
+      if(divHeight>=windowHeight-80){
+        a.style.paddingTop = '90px';
+      }else{
+        a.style.paddingTop = margin+20+ 'px';
+      }
 
 
 
@@ -189,6 +188,42 @@ if(divHeight>=windowHeight-80){
       <script src="js/script.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
+      <script>
+        let windowWidth = window.innerWidth;
+
+        if (windowWidth < 1080 ){
+            null
+        } else {
+            const lenis1 = new Lenis({
+                lerp: .05,
+                smooth: true,
+                smoothTouch: true,
+            })
+            lenis1.on('scroll', (e) => {})
+            function raf(time) {
+                lenis1.raf(time)
+                requestAnimationFrame(raf)
+            }
+
+            requestAnimationFrame(raf)
+
+
+            const lenis2 = new Lenis({
+                lerp: .05,
+                smooth: true,
+                smoothTouch: true,
+            })
+
+            lenis2.on('scroll', ScrollTrigger.update)
+
+            gsap.ticker.add((time)=>{
+                lenis2.raf(time * 1000)
+            })
+
+            gsap.ticker.lagSmoothing(0)
+        }
+        
+      </script>
       <script src="js/cursor.js"></script>   
     </body>
 </html>

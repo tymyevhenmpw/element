@@ -73,7 +73,6 @@
                 <ul>
                     <li><a href="index.html">Головна</a></li>
                     <li><a href="about.html">Про проект</a></li>
-                    <li><a href="trainers.html">Наставники проєкту</a></li>
                     <li><a href="anketa.html">Реєстрація на участь</a></li>
                     <li><a href="team.html">Команда проєкту</a></li>
                     <li><a href="#">Квитки</a></li>
@@ -177,7 +176,11 @@
                                 </div>
                             </div>
                         </div>
+
+                        
+                       
                     </div>
+                    
                 </div>
         </main>
         <div class="more-info" style="margin-bottom: -200px;"><a href="presentation/more.pdf" class="button" target="_blank">
@@ -227,37 +230,73 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
       <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script> 
       <script>
+            // const lenis1 = new Lenis({
+            //     lerp: .05,
+            //     smooth: true,
+            //     smoothTouch: true,
+            //     })
+            //     lenis1.on('scroll', (e) => {
+            //     })
+            //     function raf(time) {
+            //     lenis1.raf(time)
+            //     requestAnimationFrame(raf)
+            //     }
+
+            //     requestAnimationFrame(raf)
+
+
+            //     const lenis2 = new Lenis({
+            //     lerp: .05,
+            //     smooth: true,
+            //     smoothTouch: true,
+            //     }
+            //     )
+
+            //     lenis2.on('scroll', ScrollTrigger.update)
+
+            //     gsap.ticker.add((time)=>{
+            //     lenis2.raf(time * 1000)
+            //     })
+
+            //     gsap.ticker.lagSmoothing(0)
+      </script> 
+      <script src="https://unpkg.com/split-type"></script>
+      <script src="js/gsap-for-partnerstvo.js"></script>
+      <script>
+        let windowWidth = window.innerWidth;
+
+        if (windowWidth < 1080 ){
+            null
+        } else {
             const lenis1 = new Lenis({
                 lerp: .05,
                 smooth: true,
                 smoothTouch: true,
-                })
-                lenis1.on('scroll', (e) => {
-                })
-                function raf(time) {
+            })
+            lenis1.on('scroll', (e) => {})
+            function raf(time) {
                 lenis1.raf(time)
                 requestAnimationFrame(raf)
-                }
+            }
 
-                requestAnimationFrame(raf)
+            requestAnimationFrame(raf)
 
 
-                const lenis2 = new Lenis({
+            const lenis2 = new Lenis({
                 lerp: .05,
                 smooth: true,
                 smoothTouch: true,
-                })
+            })
 
-                lenis2.on('scroll', ScrollTrigger.update)
+            lenis2.on('scroll', ScrollTrigger.update)
 
-                gsap.ticker.add((time)=>{
-                    lenis2.raf(time * 1000)
-                })
+            gsap.ticker.add((time)=>{
+                lenis2.raf(time * 1000)
+            })
 
-                gsap.ticker.lagSmoothing(0)
-      </script> 
-      <script src="https://unpkg.com/split-type"></script>
-      <script src="js/gsap-for-partnerstvo.js"></script>
+            gsap.ticker.lagSmoothing(0)
+        }
+      </script>
       <script src="js/script.js"></script>
       <script src="js/cursor.js"></script>   
     </body>
