@@ -2960,13 +2960,6 @@ input:focus{
     .border-left::after{
         margin-left: 50px;
     }
-    .left{
-        margin-left: -50px;
-    }
-    .right{
-        margin-right: 50px;
-    }
-
     .concept-part{
         font-size: calc(var(--size)*36px);
     }
