@@ -200,7 +200,7 @@ widthToDisplay < 640 ? (circleAnimationParams2 = {boxShadow: "0px 0px 100px 10px
 tl_to_scroll_2.to(".line-to-animate-gsap-1", {height: "100%", duration: .4, delay: .01, ease: "power3.inOut"})
               .to(".circle-to-animate-gsap-1", {height: "90px", width: "90px", marginTop: "-45px", duration: .4, ease: "power3.inOut"})
               .to(".circle-to-animate-gsap-1", {backgroundSize: "100% 100%", duration: .4, ease: "power3.inOut"})
-              .to(".circle-to-animate-gsap-1", {boxShadow: "0px 0px 1000px 100px #d30000", duration: .7, ease: "power3.inOut"})
+              .to(".circle-to-animate-gsap-1", {...circleAnimationParams1, duration: .7, ease: "power3.inOut"})
               .fromTo(".concept-part-to-center-gsap-1", {x: "-100rem"}, {x: 0,   duration: .4, delay: .1})
 
 
