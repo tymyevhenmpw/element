@@ -3211,11 +3211,8 @@ main
     }
 
     .to-left{
-        white-space: wrap;
+        white-space: normal;
         text-align: center;
-        text-wrap: wrap;
-        overflow-wrap: break-word;
-        word-wrap: break-word;
         margin-left: -28px;
     }
 
