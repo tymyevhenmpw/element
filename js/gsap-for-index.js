@@ -1,42 +1,34 @@
-import scrub from "./checkCpu.js";
-
-let changeScrub = scrub;
-
-console.log('Current scrub value:', scrub);
-
 gsap.registerPlugin(ScrollTrigger);
 
-
+const widthToDisplay = window.innerWidth;
 
 const tl_to_display_1 = gsap.timeline();
 
 let startTlToScroll1 = "top 99%";
 
-const tl_to_scroll_1 = gsap.timeline({scrollTrigger:{
+let tl_to_scroll_1 = gsap.timeline({scrollTrigger:{
     trigger: ".concept-title",
     // markers: true,
     start: startTlToScroll1,
     end: "top 20%",
     scrub: 1,
-  }
-
+}
 })
 
-
-const tl_to_scroll_2 =gsap.timeline({scrollTrigger: {
+let tl_to_scroll_2 =gsap.timeline({scrollTrigger: {
   trigger: ".concept-suptitle",
   // markers: true,
-  scrub: changeScrub,
+  scrub: 1,
   start: ("bottom 70%"),
   end: ("bottom 5%"),  
 }
 })
 
 
-const tl_to_scroll_3 =gsap.timeline({scrollTrigger: {
+let tl_to_scroll_3 =gsap.timeline({scrollTrigger: {
   trigger: ".enumerate2-to-gsap-1",
   //markers: true,
-  scrub: changeScrub,
+  scrub: 1,
   start: ("bottom 80%"),
   end: ("bottom 50%"),  
   toggleActions: "play restart none none",
@@ -44,77 +36,77 @@ const tl_to_scroll_3 =gsap.timeline({scrollTrigger: {
 })
 
 
-const tl_to_scroll_4 =gsap.timeline({scrollTrigger: {
+let tl_to_scroll_4 =gsap.timeline({scrollTrigger: {
   trigger: ".enumerate2-to-gsap-1",
   // markers: true,
-  scrub: changeScrub,
+  scrub: 1,
   start: ("bottom 75%"),
   end: ("bottom 10%"),  
   toggleActions: "play restart none none",
 }
 })
 
-const tl_to_scroll_5 =gsap.timeline({scrollTrigger: {
+let tl_to_scroll_5 =gsap.timeline({scrollTrigger: {
   trigger: ".enumerate2-to-gsap-2",
   // markers: true,
-  scrub: changeScrub,
+  scrub: 1,
   start: ("top 90%"),
   end: ("bottom 40%"),  
   toggleActions: "play reverse none none",
 }
 })
 
-const tl_to_scroll_6 =gsap.timeline({scrollTrigger: {
+let tl_to_scroll_6 =gsap.timeline({scrollTrigger: {
   trigger: ".enumerate2-to-gsap-2",
   // markers: true,
-  scrub: changeScrub,
+  scrub: 1,
   start: ("top 50%"),
   end: ("top 0%"),  
   toggleActions: "play restart none none",
 }
 })
 
-const tl_to_scroll_7 =gsap.timeline({scrollTrigger: {
+let tl_to_scroll_7 =gsap.timeline({scrollTrigger: {
   trigger: ".road-circle-to-animate-gsap-2",
   // markers: true,
-  scrub: changeScrub,
+  scrub: 1,
   start: ("center 50%"),
   end: ("top 0%"),  
   toggleActions: "play restart none none",
 }
 })
 
-const tl_to_scroll_8 =gsap.timeline({scrollTrigger: {
+let tl_to_scroll_8 =gsap.timeline({scrollTrigger: {
   trigger: ".lines-to-flang",
   //markers: true,
-  scrub: changeScrub,
+  scrub: 1,
   start: ("center 90%"),
   end: ("top 40%"),  
   toggleActions: "play restart none none",
 }
 })
 
-const tl_to_scroll_9 =gsap.timeline({scrollTrigger: {
+let tl_to_scroll_9 =gsap.timeline({scrollTrigger: {
   trigger: ".waves-to-animate-1",
   //markers: true,
-  scrub: changeScrub,
+  scrub: 1,
   start: ("top 80%"),
   end: ("top -20%"),  
   toggleActions: "play restart none none",
 }
 })
 
-const tl_to_scroll_10 =gsap.timeline({scrollTrigger: {
+let tl_to_scroll_10 =gsap.timeline({scrollTrigger: {
   trigger: ".circle-to-animate-gsap-4",
   // markers: true,
-  scrub: changeScrub,
+  scrub: 1,
   start: ("center 60%"),
   end: ("bottom 30%"),  
   toggleActions: "play restart none none",
 }
 })
 
-const tl_to_scroll_11 =gsap.timeline({scrollTrigger: {
+let tl_to_scroll_11 =gsap.timeline({scrollTrigger: {
   trigger: ".circle-to-animate-gsap-10",
   //markers: true,
   scrub: 0.5,
@@ -124,7 +116,7 @@ const tl_to_scroll_11 =gsap.timeline({scrollTrigger: {
 }
 })
 
-const tl_to_scroll_12 =gsap.timeline({scrollTrigger: {
+let tl_to_scroll_12 =gsap.timeline({scrollTrigger: {
   trigger: ".circle-to-animate-gsap-9",
   // markers: true,
   scrub: 0.5,
@@ -134,20 +126,18 @@ const tl_to_scroll_12 =gsap.timeline({scrollTrigger: {
 }
 })
 
-let pinner = true;
-let wayToPlayGsap = true;
+  let pinner = true;
+  let wayToPlayGsap = true;
 
-let removeElement = document.querySelector(".fire-to-animate-gsap-1");
-let removeElement2 = document.querySelector(".fire-to-animate-gsap-2");
-let priseElement = document.querySelector(".prise-to-animate-gsap-1")
+  let removeElement = document.querySelector(".fire-to-animate-gsap-1");
+  let removeElement2 = document.querySelector(".fire-to-animate-gsap-2");
+  let priseElement = document.querySelector(".prise-to-animate-gsap-1")
 
-let triggerTlToScroll13 = ".fire-to-animate-gsap-1";
-let startTlToScroll13 = "bottom 70%";
-let endTlToScroll13 = "bottom -500%";
+  let triggerTlToScroll13 = ".fire-to-animate-gsap-1";
+  let startTlToScroll13 = "bottom 70%";
+  let endTlToScroll13 = "bottom -500%";
 
-const widthToDisplay = window.innerWidth;
-
-widthToDisplay <= 1300 ? (pinner = false, wayToPlayGsap = false, removeElement.style.display = "none", removeElement2.style.display = "flex", priseElement.style.marginTop = "-200px", triggerTlToScroll13 = ".fire-to-animate-gsap-2", startTlToScroll13 = "bottom 90%", endTlToScroll13 = "bottom 40%") : (pinner = true, wayToPlayGsap = true, removeElement.style.display = "flex", removeElement2.style.display = "none", priseElement.style.marginTop = "0px", triggerTlToScroll13 = ".fire-to-animate-gsap-1", startTlToScroll13 = "bottom 70%", endTlToScroll13 = "bottom -500%");
+  widthToDisplay <= 1300 ? (pinner = false, wayToPlayGsap = false, removeElement.style.display = "none", removeElement2.style.display = "flex", priseElement.style.marginTop = "-200px", triggerTlToScroll13 = ".fire-to-animate-gsap-2", startTlToScroll13 = "bottom 90%", endTlToScroll13 = "bottom 40%") : (pinner = true, wayToPlayGsap = true, removeElement.style.display = "flex", removeElement2.style.display = "none", priseElement.style.marginTop = "0px", triggerTlToScroll13 = ".fire-to-animate-gsap-1", startTlToScroll13 = "bottom 70%", endTlToScroll13 = "bottom -500%");
 
 let tl_to_scroll_13 =gsap.timeline({scrollTrigger: {
   trigger: triggerTlToScroll13,
@@ -159,16 +149,6 @@ let tl_to_scroll_13 =gsap.timeline({scrollTrigger: {
   toggleActions: "play restart none none",
 }
 })
-
-
-
-
-
-
-
-
-
-const customCubicBezier = gsap.parseEase("cubic-bezier(.22,.68,0,1.71)");
 
 
 if (widthToDisplay  < 1079 && widthToDisplay > 700){
@@ -206,7 +186,7 @@ gsap.to(".concept-title", {
       trigger: ".concept-title",
       start: ("center 60%"),
       end: ("bottom 30%"),  
-      scrub: 1,
+      scrub: 0.5,
     }
 
 })

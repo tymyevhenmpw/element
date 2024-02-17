@@ -88,6 +88,8 @@ html,body,.home-head, .container{
     width: 100%;
 }
 
+
+
 html.lenis {
     opacity: 1;
   }
@@ -2666,7 +2668,7 @@ input:focus{
   /* LABEL ======================================= */
   label 				 {
     color: var(--main-color);
-    font-size:23px;
+    font-size:20px;
     font-weight:normal;
     position:absolute;
     pointer-events:none;
@@ -2942,9 +2944,9 @@ input:focus{
         padding-top: 200px;
     }
 
-    main{
+    /* main{
         margin-top: 300px;
-    }
+    } */
 
     .container{
         height: fit-content;
@@ -2960,6 +2962,13 @@ input:focus{
     .border-left::after{
         margin-left: 50px;
     }
+    /* .left{
+        margin-left: -50px;
+    }
+    .right{
+        margin-right: 50px;
+    } */
+
     .concept-part{
         font-size: calc(var(--size)*36px);
     }
@@ -3099,9 +3108,9 @@ main
 
 @media(max-height: 900px){
 
-    main{
+    /* main{
         margin-top: 300px;
-    }
+    } */
 
     .container{
         height: fit-content;
@@ -3144,6 +3153,7 @@ main
 
     .ank_form{
         padding-top:100px;
+        margin-bottom: 10px;
     }
   
     .to-left {
@@ -3179,9 +3189,9 @@ main
 
 @media(max-height: 700px){
 
-    main{
+    /* main{
         margin-top: 400px;
-    }
+    } */
 }
 
 @media(max-width:700px){
@@ -3582,6 +3592,12 @@ main
     .to-final{
         font-size: 54px;
         line-height: 60.4px;
+    }
+}
+
+@media(max-width: 370px) and (min-width: 346px){
+    .to-right span {
+        margin-right: -2px;
     }
 }
 

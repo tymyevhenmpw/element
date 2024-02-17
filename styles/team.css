@@ -148,7 +148,7 @@ footer{
     height: 100%;
     width: 100%;
     top:80px;
-    right: -100%;
+    left: -100%;
     transition: all 0.5s;
     overflow: auto;
    
@@ -156,7 +156,7 @@ footer{
 }
 
 .nav ul.active{
-    right: 0%;
+    left: 0%;
 }
 
 .nav li{
@@ -468,7 +468,11 @@ canvas{
         height: 450px;
         
     }
-    
+
+    .swiper-slide{
+      
+    }
+
 }
 @media(max-width:1000px) and (min-width:500px){
     .nav-img{

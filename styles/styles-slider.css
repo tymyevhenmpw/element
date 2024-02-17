@@ -144,7 +144,7 @@ footer{
     height: 100%;
     width: 100%;
     top:80px;
-    right: -100%;
+    left: -100%;
     transition: all 0.5s;
     overflow: auto;
    
@@ -152,7 +152,7 @@ footer{
 }
 
 .nav ul.active{
-    right: 0%;
+    left: 0%;
 }
 
 .nav li{
@@ -233,7 +233,7 @@ ul.active a:before{
 }
 
 .burger-button{
-    background-color: #dddbdb;
+    background-color:#dddbdb;
     display: flex;
     content: '';
     height: 3px;
@@ -254,7 +254,7 @@ ul.active a:before{
 }
 .burger-button::after{
     position: fixed;
-    background-color: #dddbdb;
+    background-color:#dddbdb;
     margin-top: 20px;
     content: '';
     height: 3px;
@@ -421,7 +421,7 @@ ul.active a:before{
     font-size: 40px;
     margin-top: 20px;
     text-decoration: none;
-    color: #dddbdb;
+    color:#dddbdb;
     transition: all 0.5s;
     position: relative;
 }
@@ -539,6 +539,7 @@ canvas{
     .slide{
         height: 100%;
         position: relative;
+        
     }
 
     .swiper-button-next,.swiper-button-prev{
@@ -578,6 +579,8 @@ canvas{
         padding-bottom: 150px;
         width: 250px;
         height: auto;
+        
+        
     }
 }
 
@@ -635,7 +638,9 @@ canvas{
         display: flex;
     }
 
-    
+    .social-media2{
+        display: flex;
+    }
 
 }
 

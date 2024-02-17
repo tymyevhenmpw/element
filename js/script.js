@@ -49,8 +49,6 @@ if (animItems.length>0){
 
       if ((pageYOffset > animItemOffset - animItemPoint) && pageYOffset < (animItemOffset + animItemHeight)){
         animItem.classList.add('element-show');
-      }else{
-        animItem.classList.remove('element-show');
       }
     }
   }
