@@ -3243,7 +3243,7 @@ body,html {
   animation-delay: 0ms,2816ms
 }
 
-@media(max-width: 600px){
+@media(max-width: 1079px){
     .animated-background{
         display: none;
     }
