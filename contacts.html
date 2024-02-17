@@ -53,7 +53,7 @@
             <div class="firefly"></div>
         </div>
         <header>
-            <nav class="nav to-hover">
+            <nav class="nav">
                 <div class="blur"></div>
                 <div class="burger">
                     <div class="burger-button"></div>
@@ -190,39 +190,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
         <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script> 
         <script>
-            let windowWidth = window.innerWidth;
-
-            if (windowWidth < 1080 ){
-                null
-            } else {
-                const lenis1 = new Lenis({
-                    lerp: .05,
-                    smooth: true,
-                    smoothTouch: true,
-                })
-                lenis1.on('scroll', (e) => {})
-                function raf(time) {
-                    lenis1.raf(time)
-                    requestAnimationFrame(raf)
-                }
-
-                requestAnimationFrame(raf)
-
-
-                const lenis2 = new Lenis({
-                    lerp: .05,
-                    smooth: true,
-                    smoothTouch: true,
-                })
-
-                lenis2.on('scroll', ScrollTrigger.update)
-
-                gsap.ticker.add((time)=>{
-                    lenis2.raf(time * 1000)
-                })
-
-                gsap.ticker.lagSmoothing(0)
-            }
+          
         </script> 
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
         <script src="js/slider.js"> </script>
