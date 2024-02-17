@@ -198,7 +198,7 @@ const handleResize = debounce(() => {
 
 const b = document.querySelector('.concept-title');
 window.addEventListener('resize',function(){
-  if(this.window.innerWidth<391){
+  if(this.window.innerWidth<430){
     b.innerHTML = 'Концепція <br>проєкту';
   }else{
     b.innerHTML = '-Концепція проєкту-';

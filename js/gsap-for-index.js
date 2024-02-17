@@ -191,6 +191,12 @@ gsap.to(".concept-title", {
 
 })
 
+let circleAnimationParams1;
+let circleAnimationParams2;
+widthToDisplay < 640 ? (circleAnimationParams2 = {boxShadow: "0px 0px 100px 10px #d30000,  inset 0px 0px 100px -20px #d30000", duration: 1, ease: "power3.inOut"}, circleAnimationParams1 = {boxShadow: "0px 0px 100px 10px #d30000"}) : (circleAnimationParams2 = {boxShadow: "0px 0px 1000px 100px #d30000,  inset 0px 0px 100px -20px #d30000", duration: 1, ease: "power3.inOut"}, circleAnimationParams1 = {boxShadow: "0px 0px 1000px 100px #d30000"});
+
+
+
 tl_to_scroll_2.to(".line-to-animate-gsap-1", {height: "100%", duration: .4, delay: .01, ease: "power3.inOut"})
               .to(".circle-to-animate-gsap-1", {height: "90px", width: "90px", marginTop: "-45px", duration: .4, ease: "power3.inOut"})
               .to(".circle-to-animate-gsap-1", {backgroundSize: "100% 100%", duration: .4, ease: "power3.inOut"})
@@ -210,11 +216,10 @@ var elementWidth1 = centeredElement1.offsetWidth;
 var centeredElement2 = document.getElementById("circle-to-animate-gsap-3");
 var elementWidth2 = centeredElement2.offsetWidth;
 
-
 tl_to_scroll_5.to(".circle-to-animate-gsap-2", {x: elementWidth1, duration: 1, delay: 1,})
               .to(".circle-to-animate-gsap-3", {x: -elementWidth1, duration: 1, delay: 1}, 0)
-              .to(".circle-to-animate-gsap-2", {boxShadow: "0px 0px 1000px 100px #d30000,  inset 0px 0px 100px -20px #d30000", duration: 1, ease: "power3.inOut"})
-              .to(".circle-to-animate-gsap-3", {boxShadow: "0px 0px 1000px 100px #d30000,  inset 0px 0px 100px -20px #d30000", duration: 1, delay:1, ease: "power3.inOut"}, 1)
+              .to(".circle-to-animate-gsap-2", {...circleAnimationParams2})
+              .to(".circle-to-animate-gsap-3", {delay:1, ...circleAnimationParams2}, 1)
 
 
 tl_to_scroll_6.to(".road-circle-to-animate-gsap-1", {opacity: 1, duration: .4, delay: .01, ease: "power3.inOut"})
@@ -233,24 +238,21 @@ tl_to_scroll_8.fromTo(".line-to-animate-gsap-5",{x:"-100rem"}, {x: 0, duration: 
               .to(".concept-part-to-center-to-semi-final-gsap-1", {y: -800, duration: .3, ease: "power2.inOut"}, 0)
 
 
-const circleXAnimationParams = { duration: 3};
+const circleAnimationParams3 = { duration: 3};
 
-tl_to_scroll_9.to(".circle-to-animate-gsap-4", { x: -500, ...circleXAnimationParams })
-              .to(".circle-to-animate-gsap-7", { x: 500, ...circleXAnimationParams }, 0)
-              .to(".circle-to-animate-gsap-5", { x: -500, ...circleXAnimationParams }, 1)
-              .to(".circle-to-animate-gsap-8", { x: 500, ...circleXAnimationParams }, 1)
-              .to(".circle-to-animate-gsap-6", { x: -500, ...circleXAnimationParams }, 2)
-              .to(".circle-to-animate-gsap-9", { x: 500, ...circleXAnimationParams }, 2);
+tl_to_scroll_9.to(".circle-to-animate-gsap-4", { x: -500, ...circleAnimationParams3 })
+              .to(".circle-to-animate-gsap-7", { x: 500, ...circleAnimationParams3 }, 0)
+              .to(".circle-to-animate-gsap-5", { x: -500, ...circleAnimationParams3 }, 1)
+              .to(".circle-to-animate-gsap-8", { x: 500, ...circleAnimationParams3 }, 1)
+              .to(".circle-to-animate-gsap-6", { x: -500, ...circleAnimationParams3 }, 2)
+              .to(".circle-to-animate-gsap-9", { x: 500, ...circleAnimationParams3 }, 2);
 
-  
-const circleAnimationParams = { duration: 3};
-
-tl_to_scroll_10.to(".circle-to-animate-gsap-4", { rotation: -60, ...circleAnimationParams })
-               .to(".circle-to-animate-gsap-7", { rotation: 60, ...circleAnimationParams }, 0)
-               .to(".circle-to-animate-gsap-5", { rotation: -60, ...circleAnimationParams }, 1)
-               .to(".circle-to-animate-gsap-8", { rotation: 60, ...circleAnimationParams }, 1)
-               .to(".circle-to-animate-gsap-6", { rotation: -60, ...circleAnimationParams }, 2)
-               .to(".circle-to-animate-gsap-9", { rotation: 60, ...circleAnimationParams }, 2);
+tl_to_scroll_10.to(".circle-to-animate-gsap-4", { rotation: -60, ...circleAnimationParams3 })
+               .to(".circle-to-animate-gsap-7", { rotation: 60, ...circleAnimationParams3 }, 0)
+               .to(".circle-to-animate-gsap-5", { rotation: -60, ...circleAnimationParams3 }, 1)
+               .to(".circle-to-animate-gsap-8", { rotation: 60, ...circleAnimationParams3 }, 1)
+               .to(".circle-to-animate-gsap-6", { rotation: -60, ...circleAnimationParams3 }, 2)
+               .to(".circle-to-animate-gsap-9", { rotation: 60, ...circleAnimationParams3 }, 2);
 
 
 tl_to_scroll_11.to(".circle-to-animate-gsap-10", {opacity: 1, duration: 1, delay: .01, ease: "power2.inOut"})
