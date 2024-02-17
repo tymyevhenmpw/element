@@ -34,7 +34,7 @@
 
 
    body{
-    font-family: 'Caveatp', cursive;
+    font-family: var(--main-font);
     background-color: #1a1b1a;
   }
 
@@ -482,10 +482,6 @@ canvas{
         transform: translateX(-50%);
         height: 450px;
         
-    }
-
-    .swiper-slide{
-      
     }
 
 }
