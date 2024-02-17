@@ -3213,6 +3213,7 @@ main
     .to-left{
         white-space: wrap;
         text-align: center;
+	text-wrap: wrap;
         margin-left: -28px;
     }
 
