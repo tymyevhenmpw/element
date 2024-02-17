@@ -218,9 +218,6 @@ body.active{
     font-weight: bold;
     transition-duration: 0.5s;
     font-family:  var(--main-font);
-    margin-right: 20px;
-   
-
 }
 
 .nav a:hover:before{
@@ -3408,6 +3405,7 @@ main
 
     .social-media2{
         display: flex;
+	gap: 20px;
     }
 
     .trainer_photo img{
