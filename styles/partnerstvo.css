@@ -1,12 +1,6 @@
 
 
 
-@font-face {
-    font-family: 'Comic';
-    src: local('Comic Sans Ms'), local('Comic-Sans-Ms'), url('../fonts/Comic.woff2') format('woff2');
-  
-    font-style: normal;
-}
 
 
 
@@ -19,14 +13,6 @@
 
 
 
-/* @font-face {
-    font-family: 'Cuprum';
-    src: local('Cuprum Bold'), local('Cuprum-Bold'), url('/fonts/Cuprum-Bold.woff') format('woff');
-   
-    font-style: normal;
-} */
-
-
 
 body{
     color:#fff;
@@ -35,7 +21,7 @@ body{
     overflow: overlay;
     overflow-x:hidden;
     user-select: none;
-    font-family: 'Comic';
+    font-family: var(--main-font);
 }
 
 .partnerstvo{
@@ -118,7 +104,7 @@ body{
     list-style-type:none;
     position: relative;
     font-size: calc(var(--size)*30px);
-    font-family:'Gagalin', cursive;
+    font-family: var(--main-font);
     margin-bottom: 15px;
     letter-spacing: 0.5px;
     
@@ -163,7 +149,7 @@ body{
 }
 
 .partnerstvo-2 p,.partnerstvo-3 p,.partnerstvo-4 ,.partnerstvo-5 {
-    font-family: 'Gagalin', cursive;
+    font-family: var(--main-font);
     font-size: calc(var(--size)*30px);
     letter-spacing: 0.5px;
    
@@ -415,7 +401,7 @@ p > span{
 
 @media (max-width: 1180px){
     .partnerstvo-title, .partnerstvo-suptitle,.vseprozoro{
-        width: 80%;
+        width: 95%;
     }
 
     .partnerstvo-suptitle{
