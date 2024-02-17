@@ -1138,6 +1138,7 @@ ul.active a:before{
 
 .concept-part-to-center-to-semi-final-gsap-1{
     position: relative;
+ 	top: calc(var(--size)*800px);
 }
 
 .circle-to-animate-gsap-4, .circle-to-animate-gsap-5, .circle-to-animate-gsap-6, .circle-to-animate-gsap-7, .circle-to-animate-gsap-8, .circle-to-animate-gsap-9{
