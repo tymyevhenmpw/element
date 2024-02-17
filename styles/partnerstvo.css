@@ -3,7 +3,7 @@
 
 @font-face {
     font-family: 'Comic';
-    src: local('Comic Sans Ms'), local('Comic-Sans-Ms'), url('/fonts/Comic.woff2') format('woff2');
+    src: local('Comic Sans Ms'), local('Comic-Sans-Ms'), url('../fonts/Comic.woff2') format('woff2');
   
     font-style: normal;
 }
