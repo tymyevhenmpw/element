@@ -1,27 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Philosopher&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap');
-
-/* old main font 'Philosopher', sans-serif; */
-/* old .left font     font-family: 'Comfortaa'; */
-@font-face {
-    font-family: 'DIN';
-    src: local('DIN Condensed Bold'), local('DIN-Condensed-Bold'), url('/fonts/DIN-Condensed-Bold.woff') format('woff');
-   
-    font-style: normal;
-}
-
-/* 
-@font-face {
-    font-family: 'Cuprum';
-    src: local('Cuprum Bold'), local('Cuprum-Bold'), url('/fonts/Cuprum-Bold.woff') format('woff');
-   
-    font-style: normal;
-} */
 
 
 @font-face {
-    font-family: 'Menlo';
-    src: local('Menlo Regular'), local('Menlo-Regular'), url('/fonts/Menlo-Regular.woff') format('woff');
+    font-family: 'Comic';
+    src: local('Comic Sans Ms'), local('Comic-Sans-Ms'), url('/fonts/Comic.woff2') format('woff2');
   
     font-style: normal;
 }
@@ -32,8 +13,7 @@
     --secondary-color: rgb(161, 3, 5);
     --third-color: #ff0707;
     --main-color:#dddbdb;
-    --main-font:'Cuprum', cursive;
-    --left-font:'Gagalin', cursive;
+    --main-font:'Comic';
 }
 
 * {
@@ -454,7 +434,7 @@ ul.active a:before{
 
 .left p {
     margin-top: 10px;
-    font-family: var(--left-font);
+    font-family: var(--main-font);
     letter-spacing: 1px;
 }
 
@@ -1158,8 +1138,6 @@ ul.active a:before{
 
 .concept-part-to-center-to-semi-final-gsap-1{
     position: relative;
-
-    top: calc(var(--size)*800px);
 }
 
 .circle-to-animate-gsap-4, .circle-to-animate-gsap-5, .circle-to-animate-gsap-6, .circle-to-animate-gsap-7, .circle-to-animate-gsap-8, .circle-to-animate-gsap-9{

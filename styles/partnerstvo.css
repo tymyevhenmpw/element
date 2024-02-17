@@ -1,4 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap');
+
+
+
+@font-face {
+    font-family: 'Comic';
+    src: local('Comic Sans Ms'), local('Comic-Sans-Ms'), url('/fonts/Comic.woff2') format('woff2');
+  
+    font-style: normal;
+}
+
+
+
 .root {
     --size: 1;
     --primary-color: #d30000;
@@ -24,7 +35,7 @@ body{
     overflow: overlay;
     overflow-x:hidden;
     user-select: none;
-    font-family: 'Gagalin', cursive;
+    font-family: 'Comic';
 }
 
 .partnerstvo{

@@ -230,7 +230,7 @@ tl_to_scroll_7.to(".line-to-animate-gsap-4", {height: "calc(var(--size)*150px", 
 tl_to_scroll_8.fromTo(".line-to-animate-gsap-5",{x:"-100rem"}, {x: 0, duration: 1, delay: .01, ease: "power2.inOut"})
               .fromTo(".line-to-animate-gsap-6", {x:"100rem"},{x: 0, duration: 1, ease: "power2.inOut"}, 0)
               .to(".enumerate2-to-gsap-3", {textShadow:  "rgb(161, 3, 5) 2px 5px 3px", fontSize: "195%", boxShadow: "inset 15px 0 15px -5px rgb(161, 3, 5)", padding: "10px", borderRadius: "50%", duration: .3, ease: "power2.inOut"}, 0)
-              .to(".concept-part-to-center-to-semi-final-gsap-1", {y: -800, duration: .3, ease: "power2.inOut"}, 0)
+              .fromTo(".concept-part-to-center-to-semi-final-gsap-1", {y: 800}, {y: 0, duration: .3, ease: "power2.inOut"}, 0)
 
 
 const circleXAnimationParams = { duration: 3};
