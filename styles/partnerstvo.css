@@ -584,6 +584,10 @@ p > span{
     .marginpart{
         margin-bottom: 170px;
     }
+
+    .partnerstvo-2{
+        top: -200px;
+    }
 } 
 
 @media (max-width: 467px){

@@ -258,6 +258,7 @@ tl_to_scroll_10.to(".circle-to-animate-gsap-4", { rotation: -60, ...circleAnimat
 tl_to_scroll_11.to(".circle-to-animate-gsap-10", {opacity: 1, duration: 1, delay: .01, ease: "power2.inOut"})
                .to(".line-to-animate-gsap-7", {keyframes: [{ height: 0, duration: 1 },{ height: 700, duration: 8 },]})
                .to(".circle-to-animate-gsap-10", {keyframes: [{ scale: 1, duration: 1 },{ scale: 2, top: 23, duration: 8 },], ease: "power2.inOut"}, 0)
+               .to(".circle-to-animate-gsap-10", {boxShadow: "0px 0px 15px 1px var(--primary-color), inset 0px -10px 30px -10px var(--primary-color)", duration: 2})
 
 
 const trophyAnimationParams = { scale: 1.2, duration: 5, ease: "power2.inOut" };

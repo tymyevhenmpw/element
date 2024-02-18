@@ -107,6 +107,7 @@
                                       <div class="role_title">Засновник проєкту</div>
                                       <div class="role_name">Олександр Микичур</div>
                                   </div>
+                                  <div class="slide_img2"><img class="slide_img2_img" src="images/Oleksandr2.png"></div>
                                   <div class="social-media3">
                                       <p>mykychurivskyi@gmail.com</p>
                                       <p>+ 38 (067) 684 65 63 </p>
@@ -127,6 +128,7 @@
                                       <div class="role_title">Дизайнер проєкту</div>
                                       <div class="role_name">Олександр Микичур</div>
                                   </div>
+                                  <div class="slide_img2"><img class="slide_img2_img" src="images/olia.JPG"></div>
                                   <div class="social-media3">
                                       <p> ola.graphicdesigner@gmail.com</p>
                                       <p>+ 38 (066) 949 76 28 </p>
@@ -147,6 +149,7 @@
                                     <div class="role_title">Розробник сайту</div>
                                     <div class="role_name">Попович Михайло</div>
                                 </div>
+                                <div class="slide_img2"><img class="slide_img2_img" src="images/m.png"></div>
                                 <div class="social-media3" >
                                     <p>mykychurivskyi@gmail.com</p>
                                     <p>+ 38 (067) 684 65 63 </p>
@@ -167,6 +170,7 @@
                                     <div class="role_title">Розробник сайту</div>
                                     <div class="role_name">Тимчик Євген</div>
                                 </div>
+                                <div class="slide_img2"><img class="slide_img2_img" src="images/j.png"></div>
                                 <div class="social-media3" >
                                     <p>tymyevhen@gmail.com</p>
                                     <p>+ 38 (063) 503 39 29 </p>
@@ -223,6 +227,17 @@
 
                 gsap.ticker.lagSmoothing(0)
             }
+        </script>
+        <script>
+            var cont_info = document.querySelector('.cont_info');
+            var role = document.querySelector('.role');
+            var social_media3 = document.querySelector('.social-media3');
+            var slide_img2 = document.querySelectorAll('.slide_img2_img');
+            const imgHeight = cont_info.clientHeight - role.clientHeight - social_media3.clientHeight - 50 + 'px'; 
+            slide_img2.forEach(function(e){
+                e.style.height = imgHeight;
+            });
+
         </script>
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
         <script src="js/slider.js"> </script>

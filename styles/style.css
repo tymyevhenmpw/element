@@ -3163,13 +3163,6 @@ main
     }
 }
 
-@media(max-height: 700px){
-
-    /* main{
-        margin-top: 400px;
-    } */
-}
-
 @media(max-width:700px){
 
     .concept-title-old{
@@ -3268,6 +3261,12 @@ main
 
     .prize{
         font-size: calc(var(--size)*74px);
+    }
+}
+
+@media(max-width:640px){
+    .prize:hover{
+        color: var(--primary-color);
     }
 }
 
