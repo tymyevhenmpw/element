@@ -112,7 +112,8 @@ footer{
     padding: 20px 0;
     font-family: var(--main-font);
     text-shadow: 0 0 10px var(--primary-color);
-  
+    position: relative;
+    z-index: 3;
 }
 
 
@@ -540,6 +541,11 @@ canvas{
     
 
 }
+
+.swiper-lazy-preloader{
+    border: 4px solid var(--swiper-preloader-color,var(--primary-color))!important;
+    border-top-color:transparent!important ;
+}
 .fix{
     opacity: 0;
 }
@@ -547,4 +553,19 @@ canvas{
 .fix, .fix a{
     
     cursor:default;
+}
+
+
+@media(max-height:780px){
+    .img img{
+        max-height: 350px;
+        width: 250px;
+    }
+}
+
+@media(max-height:720px){
+    .img img{
+        max-height: 250px;
+        width: 200px;
+    }
 }

@@ -113,6 +113,8 @@ footer{
     padding: 20px 0;
     font-family: var(--main-font);
     text-shadow: 0 0 10px var(--primary-color);
+    position: relative;
+    z-index: 3;
   
 }
 
@@ -120,10 +122,6 @@ body.active{
     overflow: hidden;
 }
 
-footer{
-    z-index: 1;
-   
-}
 
 .blur{
     filter: blur(0.5rem);
